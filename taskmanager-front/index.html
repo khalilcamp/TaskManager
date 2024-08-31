@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header class="headerContainer">
+        <h1 class="headerTitle">Task <p class="headerGradient">Manager</p></h1>
+        <input class="headerInput" type="text" id="task-search" placeholder="Search tasks...">
+    </header>
+    
+    <div class="container">
+
+        <form class="taskHeaderContainer" id="task-form">
+            <div>
+                <input type="text" id="task-title" placeholder="Task Title" required>
+                <input type="text" id="task-description" placeholder="Task Description" required>
+            </div>
+            <div class="cont">
+                <button type="submit"><span>Add Task</span></button>
+            </div>
+        </form>
+        <div class="task-list-container">
+            <ul id="task-list"></ul>
+        </div>
+        <div class="search-term-container">
+            <p id="search-term-display">Tasks founds with name: <span id="search-term"></span></p>
+            <p id="no-tasks-found" style="display: none;">Task not found.</p>
+        </div>
+        <div id="pagination">
+            <button id="prev-page">Previous</button>
+            <span id="page-info"></span>
+            <button id="next-page">Next</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>

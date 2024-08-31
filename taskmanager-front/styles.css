@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+
+
+body {
+    font-family: "SUSE", sans-serif;
+    background-color: #F7EED3;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    padding-top: 2%;
+    width: 80%;
+    padding-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input {
+    font-family: "SUSE", sans-serif;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+button {
+    font-family: "SUSE", sans-serif;
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    max-width: 300px;
+    width: 100%;
+    height: 50px;
+    align-content: center;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+li:hover{
+    animation-name:background-change;
+    animation-duration: 2s;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #888;
+    background-color:#5cb85c;
+}
+
+button:hover{
+    animation-name:ping-button;
+    animation-duration: 2s;
+}
+
+@keyframes ping-button {
+    0% {
+        background-color: #5cb85c;
+    }
+    50% {
+        background-color: lightgreen;
+    }
+    100% {
+        background-color: #5cb85c;
+    }
+}
+
+@keyframes background-change{
+    0% {
+        background-color: #fff;
+    }
+    50% {
+        background-color: lightgreen;
+    }
+    100% {
+        background-color: #fff;
+    }
+}
+.headerContainer{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 125px;
+    padding-left: 2%;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    height: 100px;
+    padding-top: 1%;
+}
+
+.headerTitle{
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    display: flex;
+}
+.headerGradient{
+    background: -webkit-linear-gradient(#eee, #5cb85c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.headerInput{
+    width
+}
+
+.taskHeaderContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bodyContainer{
+    display: flex;
+    height: 100svh;
+}
+.sidebar{
+    width: 80px;
+    border-right: 1px solid black;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px; 
+}
+
+.plusIcon{}
