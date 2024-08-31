@@ -20,7 +20,7 @@ public class Task {
     private String description;
 
     @Enumerated(EnumType.STRING)
-    private TaskStatus status;
+    private TaskStatus status = TaskStatus.PENDING;
 
     private LocalDate createdAt;
 

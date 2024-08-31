@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     
 </head>
 <body>
@@ -36,8 +37,18 @@
             <span id="page-info"></span>
             <button id="next-page">Next</button>
         </div>
+        
+<div class="notification-container">
+    <h2>Be remembered of your tasks!</h2>
+    <form id="notification-form">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+    <p id="notification-message" style="display: none;"></p>
+</div>
+
     </div>
     <script src="script.js"></script>
-    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

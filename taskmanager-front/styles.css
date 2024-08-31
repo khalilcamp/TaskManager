@@ -63,7 +63,7 @@ li {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 10px;
+    padding-top: 10px;
     margin-bottom: 10px;
     cursor: pointer;
     max-width: 300px;
@@ -82,6 +82,10 @@ li.completed {
     text-decoration: line-through;
     color: #888;
     background-color:#5cb85c;
+}
+
+.completed {
+    background-color: #d4edda; /* Light green background */
 }
 
 button:hover{
@@ -150,12 +154,142 @@ button:hover{
     display: flex;
     height: 100svh;
 }
-.sidebar{
-    width: 80px;
-    border-right: 1px solid black;
-    display: flex;
-    justify-content: center;
-    padding-top: 50px; 
+
+.icons {
+    margin-left: 10px;
 }
 
-.plusIcon{}
+.icons svg {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.icons svg:hover {
+    transform: scale(1.2);
+}
+
+.taskContainer{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    padding-bottom: 2px;
+}
+
+.taskTitle{
+    font-weight: 600;
+    background: -webkit-linear-gradient(#eee, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.iconsContainer{
+    display: flex;
+    justify-content: end;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    width: full;
+}
+
+.taskDescription{
+    align-self:end;
+    padding-right: 5px;
+    padding-bottom: 6px;
+}
+
+.task-list-container ul li {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.task-list-container ul li:hover {
+    background-color: #f0f0f0; 
+    transform: scale(1.02); 
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply fade-in animation to task items */
+.task-list-container ul li {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Modal container */
+.task-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Modal active state */
+.task-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Fade-in animation for modal */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to modal */
+.task-modal.active {
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+/* Keyframes for fade-in new tasks */
+@keyframes fadeInNewTask {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to new tasks */
+.task-list-container ul li.new-task {
+    animation: fadeInNewTask 0.5s ease-out;
+}
+
+/* Keyframes for slide-out deletion */
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+/* Apply animation to deleted tasks */
+.task-list-container ul li.deleted-task {
+    animation: slideOut 0.5s ease-out;
+}
+
